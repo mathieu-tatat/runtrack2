@@ -1,0 +1,8 @@
+table {
+    
+    display:flex;
+    justify-content: center;
+    border: solid;
+    width: 400px;
+    margin: auto;
+}
