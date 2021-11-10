@@ -3,12 +3,21 @@
 
 if (!isset($_COOKIE['prenom'])) {   
 	
-	$prenom = $_POST['prenom'];
+	
+    echo "<form method='post'> 
+            <input type='text' name='prenom' />   
+            <input type='submit' name='connexion' value='connexion'/>   
+        </form>";
+        $prenom = $_POST['prenom'];
 	setcookie("prenom", $prenom, time() + 10000 ); 
+    
 }
 
 else {
-	echo "Bonjour ".$_COOKIE['prenom']."&nbsp";
+	echo "Bonjour ".$_COOKIE['prenom']."&nbsp"; 
+    echo "<form method='post'>
+            <input type='submit' name='deco' value='deco'/>
+        </form>";
 }
 
 
@@ -24,14 +33,9 @@ if (isset($_POST["deco"])){
     <title> job04</title>
     </head>
     <body>
-    <form method='post'> 
-            <input type='text' name='prenom' />   
-            <input type='submit' name='connexion' value='connexion'/>   
-        </form> 
+     
 
-        <form method='post'>
-            <input type='submit' name='deco' value='deco'/>
-        </form> 
+       
     </body>
  
 </html>
